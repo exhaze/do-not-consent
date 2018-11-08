@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "I Do Not Consent - Tracking Consent Form Blocker",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "This extensions blocks tracking consent forms that now appear on many sites.",
+  "homepage_url": "https://github.com/exhaze/do-not-consent",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -12,23 +12,15 @@
   "default_locale": "en",
   "options_page": "src/options_custom/index.html",
   "permissions": [
-    "https://*/*"
+    "https://www.ft.com/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://www.ft.com/*"
       ],
       "css": [
-        "src/inject/inject.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://www.google.com/*"
-      ],
-      "js": [
-        "src/inject/inject.js"
+        "src/inject/consent_blockers/ft.com.css"
       ]
     }
   ]
